@@ -117,6 +117,8 @@ styleBtn.addEventListener('click', () => {
     styleIndex = (styleIndex + 1) % styles.length;
     body.classList.add(`style-${styles[styleIndex]}`);
 });
-
+document.getElementById('github-btn').addEventListener('click', function() {
+    window.open('https://github.com/zoerish', '_blank');
+  });
 
 updateDisplay();
