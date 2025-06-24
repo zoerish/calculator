@@ -222,3 +222,20 @@ body.style-3d {
 .fab {
     font-size: 1.1rem;
 }
+github-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+  
+  .github-btn:hover {
+    background: #6e5494;
+    transform: translateY(-2px);
+  }

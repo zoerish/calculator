@@ -118,9 +118,5 @@ styleBtn.addEventListener('click', () => {
     body.classList.add(`style-${styles[styleIndex]}`);
 });
 
-// Кнопка GitHub
-githubBtn.addEventListener('click', () => {
-    window.open('https://github.com/yourusername/calculator', '_blank');
-});
 
 updateDisplay();
