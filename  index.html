@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="style-default">
+    <div class="calculator">
+        <!-- Заголовок -->
+        <div class="header">
+            <h1>Калькулятор</h1>
+        </div>
+        
+        <!-- Дисплей -->
+        <div class="display" id="display">0</div>
+        
+        <!-- Кнопки калькулятора -->
+        <div class="buttons">
+            <!-- Первый ряд -->
+            <button class="btn func" onclick="squareRoot()">√x</button>
+            <button class="btn func" onclick="square()">x²</button>
+            <button class="btn func" onclick="factorial()">x!</button>
+            <button class="btn func" onclick="backspace()"><i class="fas fa-backspace"></i></button>
+            
+            <!-- Цифры 7-8-9 -->
+            <button class="btn num" onclick="appendNumber('7')">7</button>
+            <button class="btn num" onclick="appendNumber('8')">8</button>
+            <button class="btn num" onclick="appendNumber('9')">9</button>
+            <button class="btn op" onclick="appendOperator('/')">/</button>
+            
+            <!-- Цифры 4-5-6 -->
+            <button class="btn num" onclick="appendNumber('4')">4</button>
+            <button class="btn num" onclick="appendNumber('5')">5</button>
+            <button class="btn num" onclick="appendNumber('6')">6</button>
+            <button class="btn op" onclick="appendOperator('*')">×</button>
+            
+            <!-- Цифры 1-2-3 -->
+            <button class="btn num" onclick="appendNumber('1')">1</button>
+            <button class="btn num" onclick="appendNumber('2')">2</button>
+            <button class="btn num" onclick="appendNumber('3')">3</button>
+            <button class="btn op" onclick="appendOperator('-')">-</button>
+            
+            <!-- Нижний ряд -->
+            <button class="btn num zero" onclick="appendNumber('0')">0</button>
+            <button class="btn num" onclick="appendNumber('000')">000</button>
+            <button class="btn num" onclick="appendNumber('.')">.</button>
+            <button class="btn op" onclick="appendOperator('+')">+</button>
+            
+            <!-- Последний ряд -->
+            <button class="btn eq big-btn" onclick="calculate()">=</button>
+            <button class="btn func big-btn" onclick="clearDisplay()">C</button>
+        </div>
+        
+        <!-- Нижняя панель -->
+        <div class="footer">
+            <div class="controls">
+                <button id="theme-btn" title="Темная тема"><i class="fas fa-moon"></i></button>
+                <button id="style-btn" title="Стиль кнопок"><i class="fas fa-brush"></i></button>
+                <button id="color-btn" title="Цвет дисплея"><i class="fas fa-palette"></i></button>
+                <button class="info-btn" onclick="toggleInfo()" title="Информация"><i class="fas fa-info-circle"></i></button>
+                <button id="github-btn" title="GitHub проекта"><i class="fab fa-github"></i></button>
+            </div>
+            
+            <div class="info-content">
+                <p><strong>Автор:</strong> Гавриш Зоя Дмитриевна</p>
+                <p><strong>Группа:</strong> ЛТ3-62Б</p>
+                <p class="purpose"><strong>Цель:</strong> <span>Знакомство</span> с <span>HTML</span>, <span>CSS</span> и JavaScript</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

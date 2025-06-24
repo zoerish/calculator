@@ -1,0 +1,224 @@
+:root {
+    --primary: #FD2528;
+    --secondary: #444;
+    --light: #fff;
+    --dark: #222;
+    --display-bg: #f5f5f5;
+    --num-btn: #f0f0f0;
+    --func-btn: #e0e0e0;
+    --op-btn: #444;
+    --eq-btn: #FD2528;
+    --text-dark: #333;
+    --text-light: #fff;
+    --btn-radius: 8px;
+    --btn-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.2s;
+}
+
+body {
+    background: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator {
+    width: 320px;
+    background: var(--light);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.display {
+    width: 100%;
+    height: 60px;
+    background: var(--display-bg);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 2rem;
+    text-align: right;
+    color: var(--text-dark);
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    border: none;
+    border-radius: var(--btn-radius);
+    padding: 15px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--btn-shadow);
+}
+
+.big-btn {
+    grid-column: span 2;
+    padding: 15px;
+}
+
+.num {
+    background: var(--num-btn);
+    color: var(--text-dark);
+}
+
+.num:hover {
+    background: #e0e0e0;
+}
+
+.func {
+    background: var(--func-btn);
+    color: var(--text-dark);
+}
+
+.func:hover {
+    background: #d0d0d0;
+}
+
+.op {
+    background: var(--op-btn);
+    color: var(--text-light);
+}
+
+.op:hover {
+    background: #333;
+}
+
+.eq {
+    background: var(--eq-btn);
+    color: var(--text-light);
+}
+
+.eq:hover {
+    background: #e61c1f;
+}
+
+.zero {
+    grid-column: span 1;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+.controls button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: var(--secondary);
+    color: var(--text-light);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls button:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+#github-btn {
+    background: #333;
+}
+
+#github-btn:hover {
+    background: #6e5494;
+}
+
+.info-content {
+    background: var(--num-btn);
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.info-content p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.purpose span {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* Темная тема */
+body.dark {
+    background: #121212;
+    --light: #252525;
+    --display-bg: #2d2d2d;
+    --num-btn: #333;
+    --func-btn: #444;
+    --text-dark: #f0f0f0;
+}
+
+body.dark .controls button {
+    background: var(--primary);
+}
+
+body.dark .controls button:hover {
+    background: #e61c1f;
+}
+
+/* Стили кнопок */
+body.style-default {
+    --btn-radius: 8px;
+    --btn-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+body.style-rounded {
+    --btn-radius: 16px;
+    --btn-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+body.style-flat {
+    --btn-radius: 0;
+    --btn-shadow: none;
+}
+
+body.style-3d {
+    --btn-shadow: 0 4px 0 #bbb, 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.fab {
+    font-size: 1.1rem;
+}
